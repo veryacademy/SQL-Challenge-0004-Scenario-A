@@ -15,13 +15,13 @@ ORDER BY products.name ASC;                             -- Sort results by produ
 
 -- With Aliases
 SELECT 
-    c.id AS category_id,        -- Category ID
-    c.name AS category_name,    -- Category Name
-    p.id AS product_id,         -- Product ID
-    p.name AS product_name,     -- Product Name
-    p.price                     -- Product Price
+    c.id AS category_id,        
+    c.name AS category_name,    
+    p.id AS product_id,         
+    p.name AS product_name,     
+    p.price                     
 FROM products p
-JOIN category c ON p.category_id = c.id     -- Join products with category table
-WHERE c.name = <SPECIFIC_CATEGORY_NAME>     -- Replace with the desired category ID
-ORDER BY p.name ASC;                        -- Sort results by product name in ascending order
+JOIN category c ON p.category_id = c.id     
+WHERE c.name = 'Electronics'    
+ORDER BY p.name ASC;                        
 
